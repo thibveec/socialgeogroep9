@@ -1,0 +1,58 @@
+﻿@model SocialGeoMVC.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new account.</h2>
+</hgroup>
+
+<p class="message-info">
+    Passwords must be at least @Membership.MinRequiredPasswordLength characters long.
+</p>
+
+@using (Html.BeginForm()){
+    <!--@Html.ValidationSummary()-->
+    <fieldset>
+        <legend>Account</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserModel.UserName)
+                @Html.TextBoxFor(m => m.UserModel.UserName)
+                @Html.ValidationMessageFor(m => m.UserModel.UserName, string.Empty) 
+            </li>
+            <li>
+                @Html.LabelFor(m => m.UserModel.Email)
+                @Html.TextBoxFor(m => m.UserModel.Email)
+                @Html.ValidationMessageFor(m => m.UserModel.Email, string.Empty)  
+            </li>
+            <li>
+                @Html.LabelFor(m => m.UserModel.Password)
+                @Html.PasswordFor(m => m.UserModel.Password)
+                @Html.ValidationMessageFor(m => m.UserModel.Password, string.Empty)  
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.ProfileModel.FirstName)
+                @Html.TextBoxFor(m => m.ProfileModel.FirstName)
+                @Html.ValidationMessageFor(m => m.ProfileModel.FirstName, string.Empty)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ProfileModel.SurName)
+                @Html.TextBoxFor(m => m.ProfileModel.SurName)
+                @Html.ValidationMessageFor(m => m.ProfileModel.SurName, string.Empty)
+            </li>
+        </ol>        
+    </fieldset>
+    <input type="submit" value="Register" class="button" />
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

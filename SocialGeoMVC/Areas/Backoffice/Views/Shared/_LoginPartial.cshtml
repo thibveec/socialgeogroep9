@@ -1,0 +1,5 @@
+﻿@if (Request.IsAuthenticated) {
+    <li>@Html.ActionLink(User.Identity.Name, "ChangePassword", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Change password" })</li>
+    <li class="divider"></li>
+    <li>@Html.ActionLink("Sign off", "LogOff", "Account")</li>
+}

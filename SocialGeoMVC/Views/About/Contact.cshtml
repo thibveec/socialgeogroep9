@@ -1,0 +1,74 @@
+﻿@model SocialGeoMVC.Models.ContactFormModel
+@{
+    ViewBag.Title = "Contact SocialGEO Team";
+}
+<h2>Contact Us</h2>
+<form id="contactform" class="custom">
+    <fieldset class="panel radius">
+        <legend>Contact Us</legend>
+         <ol>
+            <li>
+                @Html.LabelFor(c => c.Name)
+                @Html.TextBoxFor(c => c.Name, new { placeholder = "Type hier uw naam" })
+                @Html.ValidationMessageFor(c => c.Name, string.Empty)  
+            </li>
+            <li>
+                @Html.LabelFor(c => c.Email)
+                @Html.TextBoxFor(c => c.Email, new { placeholder = "Type hier uw email" })
+                @Html.ValidationMessageFor(c => c.Email, string.Empty) 
+            </li>
+            <li>
+                @Html.LabelFor(c => c.Subject)
+                @Html.DropDownListFor(c => c.Subject, (IEnumerable<SelectListItem>)ViewData["Subjects"])
+                @Html.ValidationMessageFor(c => c.Subject, string.Empty) 
+            </li>
+            <li>
+                @Html.LabelFor(c => c.Body)
+                @Html.TextAreaFor(c => c.Body, new { placeholder = "Type hier uw bericht" })
+                @Html.ValidationMessageFor(c => c.Body, string.Empty)  
+            </li>
+        </ol>
+        <input id="btnSend" type="submit" class="button" value="Verzenden" /><span class="preloader"></span>
+    </fieldset>
+</form>
+<div id="contactform_result" class="panel radius">
+    <span></span>
+</div>
+@section scripts{
+@Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">
+    $(function () {
+        $("#contactform").submit(function (e) {
+            e.preventDefault();
+        });
+        $('#btnSend').click(function (e) {
+            if ($("#contactform").valid()) {
+                var theContact = {
+                    Name: $('#Name').val(),
+                    Email: $('#Email').val(),
+                    Subject: $('#Subject').val(),
+                    Body: $('#Body').val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "/About/SendContactForm",
+                    data: theContact,
+                    dataType: "json",
+                    beforeSend: function (jqXHR, settings) {
+                        $('#contactform .preloader').show();
+                    },
+                    success: function (data) {
+                        $('#contactform .preloader').hide(500);
+                        $('#contactform').hide(1000);
+                        $('#contactform_result span').html(data.Message);
+                        $('#contactform_result').show(1200);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                    }
+                });
+            }
+            return false;
+        });
+    } (window));
+</script>
+}

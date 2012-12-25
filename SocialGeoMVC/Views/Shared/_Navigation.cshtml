@@ -1,0 +1,32 @@
+﻿<nav class="top-bar">
+    <ul>
+        <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+    <section>
+        <ul class="left">
+            <li class="divider"></li>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+                @Html.ActionLink("Blog", "Index", "Article")
+                <ul class="dropdown">
+                <li><a href="#">Dropdown Option</a></li>
+                <li><a href="#">Dropdown Option</a></li>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+                @Html.ActionLink("About", "Index", "About")
+                <ul class="dropdown">
+                    <li>@Html.ActionLink("Usage", "Usage", "About")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "About")</li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="right">
+            <li class="divider"></li>
+            <!-- ACCOUNT -->
+            @Html.Partial("_LoginPartial")
+        </ul>
+    </section>
+</nav>

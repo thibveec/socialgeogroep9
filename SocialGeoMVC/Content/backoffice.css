@@ -1,0 +1,156 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+*{
+	margin:0;
+	padding:0;
+}
+html
+{
+    
+}
+body
+{
+    background:url('images/bo_sidebar.png'),url('images/paper.jpg');
+    background-position: left top, center top;
+    background-repeat:repeat-y, repeat;
+}
+#backoffice-wrapper
+{
+    width:960px;
+    max-width:960px;
+    min-width:960px;
+}
+#backoffice
+{
+}
+#sidebar-left
+{
+    float:left;
+    width:280px;
+}
+#header
+{
+    margin-top:4px;
+}
+#header-logo
+{
+    margin:auto;
+    text-align:center;
+}
+#header-logo h1
+{
+    margin:0 auto;
+}
+#header-logo h1 a
+{
+    text-indent:-999em;
+    background:url('images/logo_glow.png') no-repeat;
+    width:220px;
+    height:62px;
+    display:block;
+    margin:auto;
+}
+#header-logo h1 a:hover
+{
+    background:url('images/logo_glow_hover.png') no-repeat;
+}
+#header-logo h2
+{
+    display:none;
+}
+#menu ul li
+{
+    margin-right:8px;
+    padding:6px 12px;
+    border-bottom:1px dotted #666;
+}
+#content
+{
+    margin:0 0 0 292px;
+}
+form fieldset
+{
+    padding:12px;
+}
+form ol
+{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+form legend
+{
+    display:none;
+}
+form textarea
+{
+    max-width:500px;
+    min-width:100%;
+    min-height:86px;
+}
+.preloader
+{
+    float:left;
+    display:block;
+    width:36px;
+    height:36px;
+    background:url('images/pl_1.gif') no-repeat;
+    margin:0 12px 0;
+    display:none;
+}
+.field-validation-error{
+    display: block;
+    padding: 6px 4px;
+    margin-top: -13px;
+    margin-bottom: 12px;
+    background: #C60F13;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    -moz-border-radius-bottomleft: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+#contactform_result
+{
+    display:none;
+}
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

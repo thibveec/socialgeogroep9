@@ -1,0 +1,26 @@
+﻿@model LibModels.Role
+@{
+    ViewBag.Title = "Management of roles";
+}
+<h2>Update role</h2>
+<form id="edit-role" class="custom" method="post">
+    <fieldset class="panel radius">
+        <legend>Contact Us</legend>
+         <ol>
+            <li>
+                @Html.LabelFor(a => a.Title)
+                @Html.TextBoxFor(a => a.Title, new { placeholder = "Type the title" })
+                @Html.ValidationMessageFor(a => a.Title, string.Empty)  
+            </li>
+            <li>
+                @Html.LabelFor(a => a.Description)
+                @Html.TextAreaFor(a => a.Description, new { placeholder = "Type the description" })
+                @Html.ValidationMessageFor(a => a.Description, string.Empty) 
+            </li>
+        </ol>
+        <input id="btnUpdateRole" type="submit" class="button" value="Update" />
+    </fieldset>
+</form>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

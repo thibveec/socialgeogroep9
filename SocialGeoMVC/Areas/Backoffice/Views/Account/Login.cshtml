@@ -1,0 +1,28 @@
+﻿@model SocialGeoMVC.Areas.Backoffice.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/Backoffice/Views/Shared/_LoginLayout.cshtml";
+}
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) { 
+    <fieldset class="panel radius">
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new { placeholder = "Type hier uw loginnaam" })
+                @Html.ValidationMessageFor(m => m.UserName, string.Empty) 
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Type hier uw paswoord" })
+                @Html.ValidationMessageFor(m => m.Password, string.Empty) 
+            </li>
+        </ol>
+        <input type="submit" class="button" value="Log in" />
+    </fieldset>
+    @Html.ValidationSummary(true, "Log in was unsuccessful. Please correct the errors and try again.")
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

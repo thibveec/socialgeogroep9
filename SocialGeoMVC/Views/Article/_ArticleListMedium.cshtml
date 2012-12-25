@@ -1,0 +1,9 @@
+﻿@model ICollection<LibModels.Article>
+<ul>
+@foreach (var article in Model)
+{
+    <li>
+       @Html.ActionLink(@article.Title, "Details", "Article", new {id=@article.ID }, null)
+    </li>
+}
+</ul>

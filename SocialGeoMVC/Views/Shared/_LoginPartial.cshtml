@@ -1,0 +1,15 @@
+﻿@if (Request.IsAuthenticated) {
+    <li>@Html.ActionLink(User.Identity.Name, "ChangePassword", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Change password" })</li>
+    <li class="divider"></li>
+    <li>@Html.ActionLink("Sign off", "LogOff", "Account")</li>
+}
+else
+{
+    <li class="has-dropdown">
+        <a href="#">Account</a>
+        <ul class="dropdown">
+            <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
+    </li>
+}

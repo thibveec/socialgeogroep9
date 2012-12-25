@@ -1,0 +1,16 @@
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\LibBAL.dll.config
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\LibBAL.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\LibBAL.pdb
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\EntityFramework.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\EntityFramework.Extended.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\LibModels.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\MySql.Data.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\MySql.Data.Entity.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\Newtonsoft.Json.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\LibModels.pdb
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\EntityFramework.xml
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\EntityFramework.Extended.xml
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\bin\Release\Newtonsoft.Json.xml
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\obj\Release\LibBAL.csprojResolveAssemblyReference.cache
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\obj\Release\LibBAL.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibBAL\obj\Release\LibBAL.pdb

@@ -1,0 +1,9 @@
+﻿Geachte <%TONAME%>
+
+Onderwerp: <%SUBJECT%>
+
+<%BODY%>
+
+Met vriendelijke groeten
+
+<%FROMNAME%> (Email:<%FROMEMAIL%>)

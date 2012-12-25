@@ -1,0 +1,20 @@
+﻿@model LibModels.Article
+<article class="article-details">
+    <h1>@Model.Title</h1>
+    <section class="meta">
+        @if(@Model.Categories.Count > 0)
+        {
+            <ul>
+                @foreach (var category in Model.Categories)
+                {
+                    <li>
+                        @category.Title
+                    </li>
+                }
+            </ul>
+        }
+        <p>Created on: <time datetime="@Model.CreatedDate">@Model.CreatedDate</time></p>
+    </section>    
+    <section class="description"@Html.Raw(@Model.Description)</section>
+    <section class="body">@Html.Raw(@Model.Body)</section>
+</article>

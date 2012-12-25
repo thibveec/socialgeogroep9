@@ -1,0 +1,32 @@
+﻿@model ICollection<LibModels.Role>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Management of roles</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Dates</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var role in Model)
+        {
+            <tr>
+               <td>@role.Title</td>
+               <td>@role.Description</td>
+               <td>@role.CreatedDate</td>
+               <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = role.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = role.ID }) | 
+               <td>
+            </tr>
+        }
+    </tbody>
+</table>

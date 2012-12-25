@@ -1,0 +1,38 @@
+﻿@model ICollection<LibModels.User>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Management of users</h2>
+<table width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Dates</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+               <td>@user.Profile.ProfileData.FullName</td>
+               <td>@user.UserName</td>
+               <td>@user.Email</td>
+               <td>@user.LockedDate</td>
+               <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = user.ID }) |
+                    @if (@user.LockedDate == null)
+                    {
+                        @Html.ActionLink("Lock", "Lock", new { id = user.ID })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Unlock", "UnLock", new { id = user.ID })
+                    }
+               </td>
+            </tr>
+        }
+    </tbody>
+</table>

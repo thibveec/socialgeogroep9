@@ -1,0 +1,44 @@
+﻿@model SocialGeoMVC.Areas.Backoffice.Models.ArticleCategoriesViewModel
+@{
+    ViewBag.Title = "Management of articles";
+}
+<h2>Create new article</h2>
+<form id="create-article" method="post">
+    @Html.AntiForgeryToken()
+    <fieldset class="panel radius">
+        <legend>Create Article</legend>
+         <ol>
+            <li>
+                @Html.LabelFor(a => a.Article.Title)
+                @Html.TextBoxFor(a => a.Article.Title, new { placeholder = "Type the title" })
+                @Html.ValidationMessageFor(a => a.Article.Title, string.Empty)  
+            </li>
+            <li>
+                @Html.LabelFor(a => a.Article.Description)
+                @Html.TextAreaFor(a => a.Article.Description, new { placeholder = "Type the description" })
+                @Html.ValidationMessageFor(a => a.Article.Description, string.Empty) 
+            </li>
+            <li>
+                @Html.LabelFor(a => a.Article.Body)
+                @Html.TextAreaFor(a => a.Article.Body, new { placeholder = "Type the content of article", @class = "ckeditor" })
+                @Html.ValidationMessageFor(a => a.Article.Body, string.Empty)  
+            </li>
+            <li>
+                @Html.LabelFor(a => a.Article.Categories)
+                @Html.ListBoxFor(a => a.SelectedCategoriesIds, Model.Categories, new { multiple = "multiple", @class = "chzn-select", data_placeholder="Choose one or more categories..."})
+            </li>
+        </ol>
+        <input id="btnCreateArticle" type="submit" class="button" value="Verzenden" />
+    </fieldset>
+</form>
+<style>
+.chzn-container-multi .chzn-choices .search-field input{
+    height:auto !important;
+}
+</style>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/ckeditor")
+    
+    <script>$(".chzn-select").chosen();</script>
+}

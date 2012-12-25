@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<!-- [if lt IE 7]><html dir="ltr" lang="nl-be" class="no-js lt-ie7"><![endif]-->
+<!-- [if lt IE 8]><html dir="ltr" lang="nl-be" class="no-js lt-ie8"><![endif]-->
+<!-- [if lt IE 9]><html dir="ltr" lang="nl-be" class="no-js lt-ie9"><![endif]-->
+<!-- [if lt IE 10]><html dir="ltr" lang="nl-be" class="no-js lt-ie10"><![endif]-->
+<!-- [if (gt IE 9)|!(IE)]><!--><html dir="ltr" lang="nl-be" class="no-js" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+    <head>
+        <!-- CHARACTER ENCODING -->
+	    <meta charset="UTF-8">
+	    <!-- LATEST VERSION OF RENDERING ENGINE -->
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <!-- MOST IMPORTANT SEO FRIENDLY TAG -->
+        <meta name="viewport" content="width=device-width">
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- MOST IMPORTANT SEO FRIENDLY TAG -->
+	    <title>@ViewBag.Title</title>
+	    <!-- OTHER IMPORTANT SEO TAGS -->
+	    <meta name="description" content="@ViewBag.Description">
+	    <meta name="keywords" content="@ViewBag.Keywords">
+	    <meta name="author" content="Arteveldehogeschool | Bachelor in de Grafische en Digitale Media | DRDYNSCRIPT">
+	    <meta name="copyright" content="Copyright 2010-12 Arteveldehogeschool. All rights reserved.">
+	    <!-- HUMANS.TXT FILE -->
+	    <link rel="author" type="text/plain" href="~/humans.txt">
+        <!-- ICONS -->
+        <link rel="shortcut icon" href="~/Content/images/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Content/images/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Content/images/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/images/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="~/Content/images/apple-touch-icon-57-precomposed.png">
+	    <!-- MOBILE VIEWPORT -->
+	    <meta name="viewport" content="width=device-width">
+	    <!-- LINK MY OWN STYLESHEET -->
+	    @Styles.Render("~/Content/themes/base/css", "~/Content/backoffice/css")
+	    <!-- MODERNIZR: NEW HTML5 ELEMENTS + FEATURE DETECTION -->
+	    @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <!-- BODY -->
+        <div id="backoffice-wrapper">
+            <div id="backoffice" class="clearfix">   
+                <aside id="sidebar-left">
+                    <header id="header">
+                        <hgroup id="header-logo">
+                            <h1>@Html.ActionLink("SocialGEO", "Index", "Home")</h1>
+                            <h2>BASELINE</h2>
+                        </hgroup>      
+                    </header>
+                    @Html.Partial("_Menu")
+                </aside>        
+                <section id="content">
+                    @RenderBody()
+                </section>                
+            </div>
+        </div>
+        <!-- BOTTOM SCRIPTS -->
+	    <!-- 1. GRAB GOOGLE'S JQUERY CDN -->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	    <!-- 2. FALLBACK TO LOCAL JQUERY IF CDN NOT ACTIVE -->
+	    <script>	        window.jQuery || document.write('@Url.Content("~/Scripts/jquery-1.8.2.min.js")')</script> 
+        <!-- 3. FOUNDATION -->
+        @Scripts.Render("~/bundles/foundation/backoffice")
+        <!-- 4. LIBS AND OTHER CUSTOM SCRIPTS FOR PAGES -->      
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

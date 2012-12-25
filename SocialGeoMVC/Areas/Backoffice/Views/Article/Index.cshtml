@@ -1,0 +1,35 @@
+﻿@model ICollection<LibModels.Article>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Management of articles</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table width="100%">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Creationdate</th>
+            <th>Publicationdate</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model)
+        {
+            <tr>
+               <td>@article.Title</td>
+               <td>@article.Description</td>
+               <td>@article.CreatedDate</td>
+               <td>@article.PublishedDate</td>
+               <td>
+                    @Html.ActionLink("Edit", "Edit", new { id= article.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = article.ID }) | 
+                    @Html.ActionLink("Publish", "Publish", new { id = article.ID })
+               </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibModels\bin\Release\LibModels.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibModels\bin\Release\LibModels.pdb
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibModels\bin\Release\Newtonsoft.Json.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibModels\bin\Release\Newtonsoft.Json.xml
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibModels\obj\Release\LibModels.csprojResolveAssemblyReference.cache
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibModels\obj\Release\LibModels.dll
+C:\Users\Kjell\Downloads\SOCIALGEORELOADED\LibModels\obj\Release\LibModels.pdb
